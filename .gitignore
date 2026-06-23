@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# materiale grezzo del cliente (foto/loghi/testi originali, non servono nel deploy)
+/materiali
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

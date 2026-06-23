@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-23T00:00:00.000Z",
+  "title": "Design System: P.F. Parrucchiere",
+  "extensions": {
+    "colorMeta": {
+      "miele": {
+        "role": "primary",
+        "displayName": "Miele",
+        "canonical": "oklch(72% 0.09 60)",
+        "tonalRamp": ["#3a2c19", "#5c4524", "#84642f", "#a87f43", "#cda06a", "#dcb585", "#e7c896", "#f3e2c8"]
+      },
+      "rosa-antico": {
+        "role": "secondary",
+        "displayName": "Rosa Antico",
+        "canonical": "oklch(62% 0.08 18)",
+        "tonalRamp": ["#3a1f1d", "#5c302d", "#83453f", "#a05c55", "#b9706c", "#c98e8a", "#dab1ad", "#ecd6d3"]
+      },
+      "bruno-sera": {
+        "role": "neutral",
+        "displayName": "Bruno Sera",
+        "canonical": "oklch(15% 0.015 35)",
+        "tonalRamp": ["#080504", "#15110e", "#211a16", "#332821", "#4a3a30", "#665043", "#8a7062", "#b3998a"]
+      },
+      "crema": {
+        "role": "neutral",
+        "displayName": "Crema",
+        "canonical": "oklch(94% 0.02 70)",
+        "tonalRamp": ["#3a352e", "#5c554a", "#847a69", "#a89c87", "#cdbfa7", "#e3d6c2", "#f7ecdf", "#fcf8f1"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Nome del salone in Hero, una sola volta per pagina." },
+      "headline": { "displayName": "Headline", "purpose": "Titoli di sezione." },
+      "body": { "displayName": "Body", "purpose": "Testi di supporto, recensioni." },
+      "label": { "displayName": "Label", "purpose": "Nav, pulsanti, orari." }
+    },
+    "shadows": [
+      { "name": "card-ambient", "value": "0 20px 45px -15px rgba(8, 5, 3, 0.55)", "purpose": "Profondità calda di base sotto ogni card." },
+      { "name": "card-hover", "value": "0 24px 60px -10px rgba(205, 160, 106, 0.18)", "purpose": "Bagliore caldo leggero al hover." }
+    ],
+    "motion": [
+      { "name": "ease-reveal", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Easing standard per i reveal a scroll (ease-out-quint)." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Button Primary",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "CTA principale (Prenota ora / Chiama).",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Prenota ora</a>",
+      "css": ".ds-btn-primary { display: inline-block; background: #cda06a; color: #15110e; font-family: Poppins, sans-serif; font-weight: 600; font-size: 1rem; padding: 14px 40px; border-radius: 9999px; transition: background 0.2s; } .ds-btn-primary:hover, .ds-btn-primary:focus-visible { background: #e7c896; }"
+    },
+    {
+      "name": "Button Ghost",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "CTA secondaria su sfondo scuro/foto.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">Scopri i servizi</a>",
+      "css": ".ds-btn-ghost { display: inline-block; background: transparent; color: #f7ecdf; border: 1px solid rgba(247,236,223,0.3); font-family: Poppins, sans-serif; font-weight: 500; padding: 14px 36px; border-radius: 9999px; transition: border-color 0.2s, color 0.2s; } .ds-btn-ghost:hover, .ds-btn-ghost:focus-visible { border-color: #cda06a; color: #cda06a; }"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Contenitore per recensioni, prodotti, orari.",
+      "html": "<div class=\"ds-card\">Contenuto</div>",
+      "css": ".ds-card { background: #211a16; border-radius: 16px; padding: 28px; box-shadow: 0 20px 45px -15px rgba(8, 5, 3, 0.55); transition: box-shadow 0.3s; } .ds-card:hover { box-shadow: 0 24px 60px -10px rgba(205, 160, 106, 0.18); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "La Sera al Salone",
+    "overview": "Il sito vive l'atmosfera di fine giornata in un salone di quartiere: luce dorata morbida, legno scuro, un titolare che conosce i clienti per nome. Elegante senza essere distante. Le foto vere sono il cuore del sito.",
+    "keyCharacteristics": [
+      "Sfondo quasi-nero ma caldo (bruno, non grigio/blu)",
+      "Un solo accento dorato (Miele) usato con parsimonia",
+      "Serif per il carattere, sans pulito per la leggibilità",
+      "Una sezione, un messaggio, mai affollamento"
+    ],
+    "rules": [
+      { "name": "La Regola del Bruno Caldo", "body": "Il nero di questo sito ha sempre una componente bruno/rossa, mai grigio/blu freddo.", "section": "colors" },
+      { "name": "La Regola del Serif Unico", "body": "Solo i titoli usano Playfair Display, tutto il resto è Poppins.", "section": "typography" },
+      { "name": "La Regola della Luce di Sera", "body": "Nessuna ombra grigia o dura: ogni ombra è bruna/calda e diffusa.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do usare il Miele con parsimonia — CTA e dettagli, non superfici larghe.",
+      "Do mantenere il bruno-sera caldo come fondo.",
+      "Do lasciare che le foto vere guidino ogni sezione.",
+      "Do usare ombre calde diffuse invece di bordi netti."
+    ],
+    "donts": [
+      "Don't far sembrare il sito un prodotto/app.",
+      "Don't usare card identiche in fila come template generico da parrucchiere.",
+      "Don't ripetere lo stesso eyebrow maiuscolo-tracciato sopra ogni sezione.",
+      "Don't introdurre un terzo font oltre Playfair Display e Poppins."
+    ]
+  }
+}

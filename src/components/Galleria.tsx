@@ -5,16 +5,26 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { galleria } from "@/lib/content";
 
-const colonne = [
+// Distribuzioni round-robin: ogni gruppo-colonna corrisponde esattamente al numero
+// di colonne mostrate al suo breakpoint, così nessuna colonna va a capo sbilanciando.
+const cols3 = [
   [galleria[0], galleria[3], galleria[6]],
   [galleria[1], galleria[4], galleria[7]],
   [galleria[2], galleria[5], galleria[8]],
 ];
+const cols2 = [
+  [galleria[0], galleria[2], galleria[4], galleria[6], galleria[8]],
+  [galleria[1], galleria[3], galleria[5], galleria[7]],
+];
 
-const offsets: [number, number][] = [
+const offsets3: [number, number][] = [
   [0, -70],
   [0, 90],
   [0, -50],
+];
+const offsets2: [number, number][] = [
+  [0, -50],
+  [0, 60],
 ];
 
 const GalleryColumn: React.FC<{
@@ -25,9 +35,9 @@ const GalleryColumn: React.FC<{
   const y = useTransform(progress, [0, 1], offset);
 
   return (
-    <motion.div style={{ y }} className="flex flex-col gap-6">
+    <motion.div style={{ y }} className="flex flex-col gap-4 sm:gap-6">
       {items.map((item) => (
-        <div key={item.src} className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-charcoal-soft">
+        <div key={item.src} className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-charcoal">
           <Image
             src={item.src}
             alt={item.alt}
@@ -59,10 +69,20 @@ export const Galleria: React.FC = () => {
           <p className="mt-3 font-sans text-cream/60">Colore, taglio e styling firmati P.F. Parrucchiere</p>
         </motion.div>
 
-        <div ref={ref} className="grid grid-cols-2 gap-6 lg:grid-cols-3">
-          {colonne.map((items, i) => (
-            <GalleryColumn key={i} items={items} offset={offsets[i]} progress={scrollYProgress} />
-          ))}
+        <div ref={ref}>
+          {/* Sotto i 1024px: 2 colonne bilanciate */}
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:hidden">
+            {cols2.map((items, i) => (
+              <GalleryColumn key={i} items={items} offset={offsets2[i]} progress={scrollYProgress} />
+            ))}
+          </div>
+
+          {/* Da 1024px in su: 3 colonne bilanciate con parallasse */}
+          <div className="hidden gap-6 lg:grid lg:grid-cols-3">
+            {cols3.map((items, i) => (
+              <GalleryColumn key={i} items={items} offset={offsets3[i]} progress={scrollYProgress} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -37,7 +37,7 @@ export const Hero: React.FC = () => {
         <span className="font-sans text-sm font-medium uppercase tracking-[0.35em] text-gold">
           Parrucchiere a Villorba
         </span>
-        <h1 className="font-serif text-6xl font-bold text-cream sm:text-7xl md:text-8xl">
+        <h1 className="font-serif text-5xl font-bold text-cream sm:text-7xl md:text-8xl">
           {words.map((word, i) => (
             <motion.span
               key={i}

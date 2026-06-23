@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import { servizi } from "@/lib/content";
-import { BlowDryerIcon, DropIcon, LeafIcon, RazorIcon, ScissorsIcon } from "./Icons";
+import { WavyHairIcon, DropIcon, LeafIcon, BeardIcon, ScissorsIcon } from "./Icons";
 
-const icone = [ScissorsIcon, BlowDryerIcon, RazorIcon, DropIcon, LeafIcon];
+const icone = [ScissorsIcon, WavyHairIcon, BeardIcon, DropIcon, LeafIcon];
 
 export const Servizi: React.FC = () => {
   return (

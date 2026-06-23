@@ -55,4 +55,5 @@ export const galleria = [
   { src: "/images/gallery-6.jpg", alt: "Balayage caldo con riflessi dorati" },
   { src: "/images/gallery-7.jpg", alt: "Ricci definiti con riflessi caramello" },
   { src: "/images/gallery-8.jpg", alt: "Balayage castano naturale" },
+  { src: "/images/gallery-9.jpg", alt: "Piega bionda con onde morbide e definite" },
 ];

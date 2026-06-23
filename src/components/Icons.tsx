@@ -12,30 +12,55 @@ export const ScissorsIcon: React.FC<IconProps> = ({ size = 28, className }) => (
   </svg>
 );
 
-export const BlowDryerIcon: React.FC<IconProps> = ({ size = 28, className }) => (
+export const WavyHairIcon: React.FC<IconProps> = ({ size = 28, className }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className}>
     <path
-      d="M9 8h7a4 4 0 0 1 0 8h-1v4l-3-2"
+      d="M3 7q3 -3 6 0t6 0t6 0"
       stroke="currentColor"
       strokeWidth="1.6"
-      strokeLinejoin="round"
       strokeLinecap="round"
+      strokeLinejoin="round"
     />
-    <path d="M9 8a4 4 0 1 0 0 8" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
-    <path d="M3 10v4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    <path
+      d="M3 12q3 -3 6 0t6 0t6 0"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M3 17q3 -3 6 0t6 0t6 0"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </svg>
 );
 
-export const RazorIcon: React.FC<IconProps> = ({ size = 28, className }) => (
+export const BeardIcon: React.FC<IconProps> = ({ size = 28, className }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className}>
     <path
-      d="M5 19c4-1 5-4 5-7s2-6 6-6c2 0 3 1 3 1l-2 2 2 2-2 2"
+      d="M5 7c2 .8 4 1 7 1s5-.2 7-1"
       stroke="currentColor"
       strokeWidth="1.6"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
-    <path d="M10 12 6 16" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    <path
+      d="M5 7c0 6 2.5 11 7 13 4.5-2 7-7 7-13"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M9 9.5c1 1.1 5 1.1 6 0"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </svg>
 );
 

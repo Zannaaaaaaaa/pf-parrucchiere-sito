@@ -8,7 +8,7 @@ import { galleria } from "@/lib/content";
 const colonne = [
   [galleria[0], galleria[3], galleria[6]],
   [galleria[1], galleria[4], galleria[7]],
-  [galleria[2], galleria[5]],
+  [galleria[2], galleria[5], galleria[8]],
 ];
 
 const offsets: [number, number][] = [
